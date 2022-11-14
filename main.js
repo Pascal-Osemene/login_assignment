@@ -16,7 +16,13 @@ function getInfo() {
   if (userName == user.username && password == user.password) {
     // alert("successful");
     message.innerHTML = 'Logged in successfully!';
-  } else {
+  } else if (userName != user.username && password == user.password) {
+    message.innerHTML = 'Incorrect Username!';
+  } else if (userName == user.username && password != user.password){
+    message.innerHTML = 'Incorrect Password!';
+
+  }
+  else {
     // alert("Incorrect Username or password");
     message.innerHTML = 'Incorrect Username or Password';
   }
